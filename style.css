@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+
+
+    line-height: 1.4;
+    font-weight: 300;
+
+
+}
+nav{
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    position: sticky;
+    top: 0;
+    margin-bottom: 32px;
+    background: white;
+    padding: 10px;
+    z-index: 50;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.bar_icon{
+    font-size: 24px;
+}  
+/* universal button  */
+button{
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    opacity: 0.8;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+/* Top Section Content  */
+
+.hero{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.hero_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tag{
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    align-self: flex-start;
+     
+}
+
+.hero_content h1{
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.2;
+
+}
+
+.explore_btn{
+    color: white;
+    background-color: orange;
+    align-self: flex-start;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* features css */
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    gap: 20px;
+
+}
+.feature{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.feature img{
+    width : 72px;
+}
+
+.feature:hover{
+    transition: 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.09);
+}
+
+
+.divider{
+    border: 1px solid rgb(232, 222, 222);
+    margin: 20px 0;
+}
+
+/* menu bar  */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 50px 0;
+    
+}
+
+.menu .tag{
+    align-self: center;
+}
+
+/* grid start from here  */
+
+.grid{
+    display: grid ;
+    gap: 10px;
+    grid-template-areas: 
+    "I1 I1 I2 I3"
+    "I1 I1 I2 I7"
+    "I4 I5 I6 I7"
+    
+    ;
+    
+}
+
+.item1{
+    grid-area: I1;
+}
+.item2{
+    grid-area: I2;
+}
+.item3{
+    grid-area: I3;
+}
+.item4{
+    grid-area: I4;
+}
+.item5{
+    grid-area: I5;
+}
+.item6{
+    grid-area: I6;
+}
+.item7{
+    grid-area: I7;
+}
+
+.grid-img{
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-img:hover{
+    /* border: 2px solid rgb(255, 0, 0); */
+    transform: scale(1.05);
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    
+}
+
+
+/* footer section */
+
+footer {
+    background-color: rgb(224, 166, 58);
+}
+
+.footer_container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.link_list ul   {
+    list-style: none;
+}
+.link_list h3{
+    margin-bottom: 10px;
+}
+.link_list ul li{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.news_letter input {
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.news_letter h3{
+    
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    font-size: 20px;
+    padding: 5px 40px;
+    
+}
+.social_icon{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+/* responsive mode  */
+
+@media(max-width:786px){
+    .hero{
+            flex-direction: column;
+
+    }
+    .hero_image{
+        display: flex;
+        justify-content: center;
+    }
+    .hero_image img{
+        width: 80%;
+        /* margin: 0 auto; */
+
+    }
+
+    .hero_content{
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hero_content h1{
+        font-size: 32px;
+        line-height: 1.2;
+
+    }
+
+    .features{
+        flex-direction: column;
+    }
+
+    .feature{
+        flex-direction: column;
+    }
+
+    .grid{
+        padding: 10px;
+
+    }
+    .grid-img{
+        border-radius: 0px;
+    }
+
+    .footer_container{
+        flex-direction: column;
+    }
+}
+
